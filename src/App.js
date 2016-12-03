@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { Link, Match } from 'react-router';
 import GamesPage from './GamesPage';
 import GameForm from './GameForm';

@@ -12,6 +12,14 @@ mongodb.MongoClient.connect(dbUrl, function(err, db) {
     });
   });
 
+  app.use((req, res) => {
+    res.status(404).json({
+      errors: {
+        global: "Still working on it. Please try again later when we implement it"
+      }
+    });
+  })
+
   app.listen(8080, () => console.log('Server is running on localhost:8080'));
 
 });
