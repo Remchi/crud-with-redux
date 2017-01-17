@@ -1,4 +1,5 @@
 import React from 'react';
+import GameCard from './GameCard';
 
 export default function GamesList({ games }) {
   const emptyMessage = (
@@ -6,7 +7,9 @@ export default function GamesList({ games }) {
   );
 
   const gamesList = (
-    <p>games list</p>
+    <div className="ui four cards">
+      { games.map(game => <GameCard game={game} key={game._id} />) }
+    </div>
   );
 
   return (
